@@ -1,4 +1,4 @@
-# duckhealth
+# DUCK-HEALTH-REBORN
 
 ## Project setup
 ```
