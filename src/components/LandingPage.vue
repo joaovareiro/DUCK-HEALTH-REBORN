@@ -4,11 +4,11 @@
         <!--Barra de navegacao-->
         <div class = "nav-bar">
             <img id="nav-bar-logo" src="../assets/Logo/LogoDuckHealth.png" alt="logo">
-            <div class="buttons-nav-bar">
-                <button>Inicio</button>
-                <button>Sobre</button>
-                <button>Exames</button>
-                <button>Contato</button>
+            <div class="container-button-nav-bar">
+                <button class = "button-nav-bar">Inicio</button>
+                <button class = "button-nav-bar">Sobre</button>
+                <button class = "button-nav-bar">Exames</button>
+                <button class = "button-nav-bar">Contato</button>
             </div>
         </div>
 
@@ -70,16 +70,26 @@ export default {
         margin: 14px 0 14px 130px;
     }
 
-    .buttons-nav-bar{
-        font-family: 'Nunito', sans-serif;
-        float: right;
-        margin-top: 41.77px;
-        margin-right:74.05px;
-        justify-content: space-evenly;
+    .container-button-nav-bar{
+        float:right;
+        width: 480px;
+        height: 40px;
+        margin-top:40px;
+        margin-right: 47px;
+    }
+
+    .button-nav-bar{
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        color: #FFFFFF;
+        background-color: #15C3D6;
+        border: none;
+        margin-right: 20px;
     }
 
     .banner{
-        margin-top: 15px;
         width : 1441px;
         height : 672px;
         background-color: #15C3D6;
