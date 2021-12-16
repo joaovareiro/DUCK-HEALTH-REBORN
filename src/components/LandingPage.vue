@@ -40,6 +40,36 @@
             </div>
         </div>
 
+        <!-- Exames -->
+        <div class = "exams">
+            <p class = "exams-text">Exames</p>
+            <img src="../assets/LandingPage/Exames/Exame1.png">
+            <img src="../assets/LandingPage/Exames/Exame2.png">
+            <img src="../assets/LandingPage/Exames/Exame3.png">
+            <img src="../assets/LandingPage/Exames/Exame4.png">
+            <img src="../assets/LandingPage/Exames/Exame5.png">
+        </div>
+
+        <div class = "address">
+            <div class = "address-container">
+                <div class = "address-title">
+                    Endereço
+                </div>
+                <div class = "address-itself">
+                    <img src="../assets/LandingPage/Endereco/Endereco1.svg">   
+                    <p id="address-itself--txt">Rua dos Doidões, Bairro Muito Doido, N° 127</p>
+                </div>
+                <div class = "address-plus1">
+                    <img id="address-plus1--img" src="../assets/LandingPage/Endereco/Endereco2.svg">
+                    <p id="address-plus1--txt">Ambiente climatizado, para o seu conforto ao atende-lo!</p>
+                </div>
+                <div class = "address-plus2">
+                    <img id="address-plus2--img" src="../assets/LandingPage/Endereco/Endereco3.svg">
+                    <p id="address-plus2--txt">Sala com brinquedos e passa-tempo para as crianças!</p>
+                </div>
+            </div>
+            <img class="address-map" src="../assets/LandingPage/Endereco/Map.svg">
+        </div>
     </div>
 
 </template>
@@ -204,5 +234,84 @@ export default {
         margin-top: 82px;
     }
 
+    .exams{
+        width: 1440px;
+        height: 656px;
+        background-color: #FFD666;
+        border-radius: 0 150px 0 150px;
+    }
+
+    .address{
+        margin-top: 40px;
+        width: 1440px;
+        height: 350px;
+    }
+
+    .address-map{
+        width: 630px;
+        height: 267px;
+        float: right;
+        margin-right: 68px;
+    }
+
+    .address-container{
+        margin-left:102px;
+        float:left;
+        width: 482px;
+        height:248px;
+    }
+
+    .address-title{
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        color: #2E4A7D;
+    }
+
+    .address-itself{
+        margin-top: 30px;
+    }
+
+    #address-itself--txt{    
+        float:right;
+        margin-top:0px;
+        margin-right: 50px;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        color: #2E4A7D;
+    }
+
+    .address-plus1{
+        margin-top: 20px;
+    }
+
+    #address-plus1--txt{    
+        float:right;
+        margin-left:50px;
+        margin-top:-45px;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        color: #2E4A7D;
+    }
+
+    .address-plus2{
+        margin-top: 20px;
+    }
+    #address-plus2--txt{    
+        float:right;
+        margin-left:50px;
+        margin-top:-45px;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        color: #2E4A7D;
+    }
+    
 
 </style>
