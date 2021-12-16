@@ -42,12 +42,36 @@
 
         <!-- Exames -->
         <div class = "exams">
-            <p class = "exams-text">Exames</p>
-            <img src="../assets/LandingPage/Exames/Exame1.png">
-            <img src="../assets/LandingPage/Exames/Exame2.png">
-            <img src="../assets/LandingPage/Exames/Exame3.png">
-            <img src="../assets/LandingPage/Exames/Exame4.png">
-            <img src="../assets/LandingPage/Exames/Exame5.png">
+            <p class = "exams-title" >Exames</p>
+
+            <div class = "exams-container">
+
+                <div class = "exams-item" id="et1">
+                    <img class = "exams-item--img" src="../assets/LandingPage/Exames/Exame1.svg">
+                    <p class = "exams-item--txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin, </p>
+                </div>
+
+                <div class = "exams-item" id="et2">
+                    <img class = "exams-item--img" src="../assets/LandingPage/Exames/Exame2.svg">
+                    <p class = "exams-item--txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin, </p>
+                </div>
+
+                <div class = "exams-item" id="et3">
+                    <img class = "exams-item--img" src="../assets/LandingPage/Exames/Exame3.svg">
+                    <p class = "exams-item--txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin, </p>
+                </div>
+
+                <div class = "exams-item" id="et4">
+                    <img class = "exams-item--img" src="../assets/LandingPage/Exames/Exame1.svg">
+                    <p class = "exams-item--txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin, </p>
+                </div>
+
+                <div class = "exams-item" id="et5">
+                    <img class = "exams-item--img" src="../assets/LandingPage/Exames/Exame2.svg">
+                    <p class = "exams-item--txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin, </p>
+                </div>
+
+            </div>
         </div>
 
         <div class = "address">
@@ -273,6 +297,53 @@ export default {
         height: 656px;
         background-color: #FFD666;
         border-radius: 0 150px 0 150px;
+    }
+
+    .exams-container{
+        width: 1172px;
+        height: 501px;
+        margin-top: 42px;
+        margin-left:134px;
+        display: flex;
+    }
+
+    #et2{
+        margin-top:246px;
+    }
+
+    #et4{
+        margin-top:246px;
+    }
+    
+    .exams-title{
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 38px;
+        color:#2E4A7D;
+        margin-left:60px;
+        margin-top: 30px;
+    }
+
+    .exams-item{
+        width: 234px;
+        height: 296px;
+    }
+
+    .exams-item--img{
+        margin-left: 35.5px;
+    }
+
+    .exams-item--txt{
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #2E4A7D;
     }
 
     .address{
