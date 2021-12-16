@@ -55,21 +55,55 @@
                 <div class = "address-title">
                     Endereço
                 </div>
-                <div class = "address-itself">
+                <div class = "address-item">
                     <img src="../assets/LandingPage/Endereco/Endereco1.svg">   
-                    <p id="address-itself--txt">Rua dos Doidões, Bairro Muito Doido, N° 127</p>
+                    <p class="address-item--txt1">Rua dos Doidões, Bairro Muito Doido, N° 127</p>
                 </div>
-                <div class = "address-plus1">
-                    <img id="address-plus1--img" src="../assets/LandingPage/Endereco/Endereco2.svg">
-                    <p id="address-plus1--txt">Ambiente climatizado, para o seu conforto ao atende-lo!</p>
+                <div class = "address-item">
+                    <img src="../assets/LandingPage/Endereco/Endereco2.svg">
+                    <p class ="address-item--txt2">Ambiente climatizado, para o seu conforto ao atende-lo!</p>
                 </div>
-                <div class = "address-plus2">
-                    <img id="address-plus2--img" src="../assets/LandingPage/Endereco/Endereco3.svg">
-                    <p id="address-plus2--txt">Sala com brinquedos e passa-tempo para as crianças!</p>
+                <div class = "address-item">
+                    <img src="../assets/LandingPage/Endereco/Endereco3.svg">
+                    <p class="address-item--txt2">Sala com brinquedos e passa-tempo para as crianças!</p>
                 </div>
             </div>
             <img class="address-map" src="../assets/LandingPage/Endereco/Map.svg">
         </div>
+
+        <div class = "contact">
+            <div class = "contact-forms">
+                <input type="text" class="contact-forms-small-input" id="cfsm1" placeholder="Nome">
+                <input type="text" class="contact-forms-small-input" id="cfsm2" placeholder="Email">
+                <textarea type="text" class="contact-forms-big-input" placeholder="Como podemos ajudar? Envie sua dúvida"></textarea>
+                <button class="contact-forms-button">Enviar Mensagem</button>
+            </div>
+            <div class = "contact-container">
+                <p class = "contact-title">Contatos</p>
+                <div class = "contact-item" id = "contact-phone">
+                    <img class="contact-item--img" src="../assets/LandingPage/Contato/Contato1.svg">
+                    <p class="contact-item--txt">67(0000-0000) ou 67(00000-0000)</p>
+                </div>
+                <div class = "contact-item" id = "contact-instagram">
+                    <img class="contact-item--img" src="../assets/LandingPage/Contato/Contato2.svg">
+                    <p class="contact-item--txt">@Duck_Health</p>
+                </div>
+                <div class = "contact-item" id = "contact-facebook">
+                    <img class="contact-item--img" src="../assets/LandingPage/Contato/Contato3.svg">
+                    <p class="contact-item--txt">Duck Health</p>
+                </div>
+                <div class = "contact-item" id = "contact-linkedin">
+                    <img class="contact-item--img" src="../assets/LandingPage/Contato/Contato4.svg">
+                    <p class="contact-item--txt">Duck Health</p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "footer">
+            <img class = "footer-logo" src="../assets/Logo/LogoDuckHealth.png">
+            <p class = "footer-title">Duck Health</p>
+        </div>
+
     </div>
 
 </template>
@@ -269,11 +303,11 @@ export default {
         color: #2E4A7D;
     }
 
-    .address-itself{
+    .address-item{
         margin-top: 30px;
     }
 
-    #address-itself--txt{    
+    .address-item--txt1{    
         float:right;
         margin-top:0px;
         margin-right: 50px;
@@ -284,11 +318,7 @@ export default {
         color: #2E4A7D;
     }
 
-    .address-plus1{
-        margin-top: 20px;
-    }
-
-    #address-plus1--txt{    
+    .address-item--txt2{    
         float:right;
         margin-left:50px;
         margin-top:-45px;
@@ -299,19 +329,128 @@ export default {
         color: #2E4A7D;
     }
 
-    .address-plus2{
+    .contact{
+        width: 1440px;
+        height: 350px;
+    }
+
+    .contact-item{
+        display: flex;
+        justify-content: left;
+        float:center;
         margin-top: 20px;
     }
-    #address-plus2--txt{    
-        float:right;
-        margin-left:50px;
-        margin-top:-45px;
+
+    .contact-title{
+            margin-top:0px;
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 48px;
+            text-align: center;
+            color: #2E4A7D;
+    }
+
+    .contact-forms{
+        width: 700px;
+        height: 350;
+        float:left;
+        margin-left: 15px;
+    }
+
+    .contact-forms-small-input{
+        border-radius: 8px;
+        border: none;
+        padding-left: 10px;
+        width: 335px;
+        height: 52px;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 27px;
+        color: #909090;
+    }
+
+    #cfsm1{
+        float: left;
+    }
+
+    #cfsm2{
+        float: right;
+    }
+
+    .contact-forms-big-input{
+        border-radius: 8px;
+        border: none;
+        margin-top:15px;
+        padding-left: 10px;
+        padding-top: 5px;
+        width: 690px;
+        height: 158px;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+    }
+
+    .contact-forms-button{
+        border-radius: 8px;
+        border: none;
+        margin-top:18px;
+        width: 700px;
+        height: 52px;
+        background-color: #2E4A7D;
+        color: #FFFFFF;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        float: center;
+    }
+
+    .contact-container{
+        width: 630px;
+        height: 350px;
+        float: right;
+        margin-top:-25px;
+    }
+
+    .contact-item--img{
+        float: left;
+        margin-top: -15px;
+    }
+    .contact-item--txt{
+        float: left;
+        margin-left:22px;
+        margin-top:0px;
         font-family: Nunito;
         font-style: normal;
         font-weight: 800;
         font-size: 18px;
         color: #2E4A7D;
     }
-    
 
+    .footer{
+        width: 1440px;
+        height: 182px;
+        background-color: #15C3D6;
+        border-radius: 0 80px 0 0;
+    }
+
+    .footer-logo{
+        margin-top:22px;
+        width: 160px;
+        float: left;
+    }
+
+    .footer-title{
+        margin-top:68px;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        float:left;
+        color: #FFFFFF;
+    }
 </style>
