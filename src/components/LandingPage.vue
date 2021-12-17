@@ -14,6 +14,7 @@
 
         <!-- Banner -->
         <div class = "banner">
+                <img class = "banner-circle" src="../assets/Logo/Circle.svg">
                 <div class = "banner-container">
                     <p class="banner-title">Duck Health</p>
                     <p class="banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia euismod imperdiet. Pellentesque vel ultricies ante. lacinia euismod imperdiet. ultricies ante. </p>
@@ -27,6 +28,7 @@
 
         <!-- Sobre nos -->
         <div class = "about-us">
+            <img class = "about-us-circle" src="../assets/Logo/Circle.svg">
             <img class="about-us-img" src="../assets/LandingPage/AboutUs/doctor.png" alt="doutor fazendo exame">
             <div id="about-us-container">
                 <p class="about-us-title">Sobre nós</p>
@@ -42,10 +44,10 @@
 
         <!-- Exames -->
         <div class = "exams">
+            
             <p class = "exams-title" >Exames</p>
 
             <div class = "exams-container">
-
                 <div class = "exams-item" id="et1">
                     <img class = "exams-item--img" src="../assets/LandingPage/Exames/Exame1.svg">
                     <p class = "exams-item--txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin, </p>
@@ -140,11 +142,14 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+    
     .landing-page{
         background-color:#EBF2F5; 
     }
-    
+
     .nav-bar{
+    position: relative;
+    z-index: 2;
     background-color: #15C3D6;
     width: 1441px;
     height: 118px;
@@ -177,7 +182,17 @@ export default {
         margin-right: 20px;
     }
 
+    .button-nav-bar:hover{
+        background-color: #139cac;
+    }
+
+    .button-nav-bar:active{
+        background-color: #107783;
+    }
+
     .banner{
+        position: relative;
+        z-index: 1;
         width : 1441px;
         height : 672px;
         background-color: #15C3D6;
@@ -224,6 +239,10 @@ export default {
         border:none;
     }
 
+    .banner-button:active{
+        background-color: #19315e;
+    }
+
     #banner-button-text{
         float:left;
         width:216px;
@@ -236,6 +255,7 @@ export default {
         color: #FFFFFF;
         
     }
+    
     #banner-button-icon{
         float:left;
         margin-top:15px;
@@ -244,27 +264,44 @@ export default {
         height: 40px;
     }   
 
+    .banner-circle{
+        margin-right:-200px;
+        margin-top: -180px;
+        float: right;
+        z-index: 0;
+    }
+
     #banner-img{
         width: 943px;
         height: 740px;
         float:right;
         margin-top: -550px;
+        z-index: 1;
+    }
+
+    .about-us-circle{
+        position: relative;
+        margin-top: -250px;
+        margin-left: 440px;
+        z-index: 0;
     }
 
     .about-us{
         width: 1440px;
         height: 664px;
+        margin-top: -30px;
     }
 
     #about-us-container{
         float: right;
         margin-top: 50px;
-        margin-right: 81px;
+        margin-right: 105px;
         width: 507px;
         height: 441px;
     }
 
     .about-us-title{
+        margin-top: -242px;
         font-family: Nunito;
         font-style: normal;
         font-weight: 800;
@@ -279,7 +316,6 @@ export default {
         font-style: normal;
         font-weight: 800;
         font-size: 20px;
-        line-height: 27px;
         display: flex;
         align-items: center;
         text-align: justify;
@@ -287,12 +323,14 @@ export default {
     }
 
     .about-us-img{
+        position: relative;
         height: 500px;
         margin-left:83px;
-        margin-top: 82px;
+        margin-top: -230px;
     }
 
     .exams{
+        margin-top:-55px;
         width: 1440px;
         height: 656px;
         background-color: #FFD666;
@@ -308,11 +346,12 @@ export default {
     }
 
     #et2{
-        margin-top:246px;
+        margin-top:186px;
     }
 
     #et4{
-        margin-top:246px;
+
+        margin-top:186px;
     }
     
     .exams-title{
@@ -322,10 +361,11 @@ export default {
         font-size: 38px;
         color:#2E4A7D;
         margin-left:60px;
-        margin-top: 30px;
+        padding-top: 25px;
     }
 
     .exams-item{
+        margin-top:-50px;
         width: 234px;
         height: 296px;
     }
@@ -478,6 +518,10 @@ export default {
         font-weight: 800;
         font-size: 20px;
         float: center;
+    }
+
+    .contact-forms-button:active{
+        background-color: #19315e;
     }
 
     .contact-container{
