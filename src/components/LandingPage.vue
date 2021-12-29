@@ -4,12 +4,33 @@
         <!--Barra de navegacao-->
         <div class = "nav-bar">
             <div class = "nav-bar-container">
-            <img id="nav-bar-logo" src="../assets/Logo/LogoDuckHealth.png" alt="logo">
-            <div class="container-button-nav-bar">
-                <button class = "button-nav-bar">Inicio</button>
-                <button class = "button-nav-bar">Sobre</button>
-                <button class = "button-nav-bar">Exames</button>
-                <button class = "button-nav-bar">Contato</button>
+            <img class="nav-bar-logo" src="../assets/Logo/LogoDuckHealth.png" alt="logo">
+
+            <div class="nav-bar-toggle">
+                <div class = "nav-bar-rectangle"></div>
+                <div class = "nav-bar-rectangle"></div>
+                <div class = "nav-bar-rectangle"></div>
+            </div>
+
+            <div class="nav-bar-container-buttons">
+                <ul class = "lista-buttons">
+                <li>
+                    <a class="nav-bar-button">Inicio</a>    
+                </li>
+                <li>
+                    <a class="nav-bar-button">Sobre</a>
+                </li>
+
+                <li>
+                <a class="nav-bar-button">Exames</a>
+                </li>
+
+                <li>
+                <a class="nav-bar-button">Contato</a>
+                </li>
+
+
+                </ul>
             </div>
         </div>
         </div>
@@ -81,6 +102,7 @@
             </div>
         </div>
 
+        <!-- Endereco -->
         <div class = "address">
             <div class = "address-container">
             <div class = "address-container-info">
@@ -106,6 +128,7 @@
         </div>
         </div>
 
+        <!-- Contato-->
         <div class = "contact">
             <div class = "contact-container">
                 <div class = "contact-forms">
@@ -143,7 +166,8 @@
                 </div>
             </div>
         </div> 
-
+        
+        <!-- Footer -->
         <div class = "footer">
             <div class = "footer-container">
             <img class = "footer-logo" src="../assets/Logo/LogoDuckHealth.png">
@@ -237,11 +261,41 @@ export default {
 
     @media only screen and (max-width: 980px){
 
+    .banner-button{
+    display: flex;
+    width: 95%;
+    margin-top: 55px;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    background-color: #2E4A7D;
+    border-radius: 20px;
+    border: none;
+    justify-content: space-evenly;
+    }
+
+    .banner-button-text{
+        font-size: 1.2rem;
+    }
+    
+    .banner-title{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .banner-text{
+        width: 90;
+        font-family: Nunito;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+    
     .contact-container{
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding-left: 10%;
     }
 
     .contact-forms-user-info{
@@ -256,6 +310,10 @@ export default {
     
     .contact-items{
         padding-left: 10%;
+    }
+
+    .contact-forms-container{
+        width: 100%;
     }
 
     .address-title{
@@ -279,20 +337,20 @@ export default {
         margin-top:15px;
     }
 
-    .banner-container-info{
-        margin-left: 0px;
-    }
     
     .banner-container{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-left: -25%;
     }
 
     .banner-container--img{
     width: 100%;
     max-width: 600px;
+    margin-left:15%;
     }
+
     
     .about-us-container{
     flex-direction: column;
@@ -305,7 +363,7 @@ export default {
 
     .about-us-img{
         display: flex;
-        width: 100%;
+        width: 90%;
         max-width: 600px;
         min-width: 250px;
         margin: 0;
@@ -313,6 +371,7 @@ export default {
 
     .about-us-container-info{
     margin: 0;
+    width: 80%;
     margin-top: 40px;
     max-width: 520px;
     }
@@ -397,10 +456,7 @@ export default {
     .banner-button:active{
         background-color: #19315e;
     }
-
-    .banner-button-icon{
-    }
-
+    
     .banner-button-text{
         margin-left: -20px;
     }
@@ -449,6 +505,30 @@ export default {
     }
 
     @media only screen and (max-width: 450px){
+    
+    .nav-bar-container{
+        display: flex;
+        flex-direction: column;
+        background-color: #15C3D6;
+        height: 175px;
+    }
+
+    .nav-bar-container-buttons{
+        display: none;
+    }
+
+    .nav-bar-toggle{
+    width: 40px;
+    height: 30px;
+    }
+
+    .nav-bar-rectangle{
+        background-color: #ffffff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+    }
+    
     .exams{
         border-radius: 0 120px 0 120px;
     }
@@ -692,6 +772,62 @@ export default {
         font-size: 40px;
         float:left;
         color: #FFFFFF;
+    }
+
+    .nav-bar{
+        background:#15C3D6;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 1440px;
+    }
+
+    .nav-bar-logo{
+    width: 70px;
+    margin: 10px 0 0 0;
+    padding: 5px;
+    background:#2E4A7D;
+    border-radius: 8px;
+    margin-left: 15px;
+    transition-duration: 0.5s;
+    }
+
+    .nav-bar-container-buttons{
+        padding: 5px;
+    }
+
+    .lista-buttons{
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-bar-button{
+        font-family: Nunito;
+        color:#ffffff;
+        font-weight: 700;
+        font-size: 1.7rem;
+        margin-right: 35px;
+        text-decoration: none;
+        transition-duration: 0.5s;
+    }
+
+    li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    }
+
+    a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
     }
     
 </style>
