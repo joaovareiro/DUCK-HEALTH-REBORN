@@ -2,6 +2,7 @@
 
     <div class = "landing-page">
         <!--Barra de navegacao-->
+        <head>
         <div class = "nav-bar">
             <div class = "nav-bar-container">
             <img class="nav-bar-logo" src="../assets/Logo/LogoDuckHealth.png" alt="logo">
@@ -29,12 +30,12 @@
                 <a class="nav-bar-button">Contato</a>
                 </li>
 
-
                 </ul>
             </div>
         </div>
         </div>
-
+        </head>
+        <body onresize="modificar()">
         <!-- Banner -->
         <div class = "banner">
                 <div class = "banner-container">
@@ -166,26 +167,31 @@
                 </div>
             </div>
         </div> 
-        
+        </body>
         <!-- Footer -->
+        <footer>
         <div class = "footer">
             <div class = "footer-container">
             <img class = "footer-logo" src="../assets/Logo/LogoDuckHealth.png">
             <p class = "footer-title">Duck Health</p>
             </div>
         </div>
+        </footer>
     </div>
+    
 </template>
 
 <script>
-export default {
-
-}
+src = "../script.js"
 </script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
+    * {
+    padding: 0;
+    margin: 0;
+    }
 
     .landing-page{
     background-color: #FFFFFF;
@@ -259,125 +265,6 @@ export default {
     margin-inline-end: 0px;
     }
 
-    @media only screen and (max-width: 980px){
-
-    .banner-button{
-    display: flex;
-    width: 95%;
-    margin-top: 55px;
-    color: #FFFFFF;
-    font-size: 1.8rem;
-    background-color: #2E4A7D;
-    border-radius: 20px;
-    border: none;
-    justify-content: space-evenly;
-    }
-
-    .banner-button-text{
-        font-size: 1.2rem;
-    }
-    
-    .banner-title{
-        display: flex;
-        justify-content: center;
-        width: 50%;
-    }
-
-    .banner-text{
-        width: 90;
-        font-family: Nunito;
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: #FFFFFF;
-    }
-
-    
-    .contact-container{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .contact-forms-user-info{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .contact-container-info{
-        padding-top: 20px;
-    }
-    
-    .contact-items{
-        padding-left: 10%;
-    }
-
-    .contact-forms-container{
-        width: 100%;
-    }
-
-    .address-title{
-        display: flex;
-        justify-content: center;
-    }
-
-    .address-container-info{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .address-container{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .address-map{
-        margin-top:15px;
-    }
-
-    
-    .banner-container{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: -25%;
-    }
-
-    .banner-container--img{
-    width: 100%;
-    max-width: 600px;
-    margin-left:15%;
-    }
-
-    
-    .about-us-container{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 90px;
-    margin-left:5%;
-    }
-
-
-    .about-us-img{
-        display: flex;
-        width: 90%;
-        max-width: 600px;
-        min-width: 250px;
-        margin: 0;
-    }
-
-    .about-us-container-info{
-    margin: 0;
-    width: 80%;
-    margin-top: 40px;
-    max-width: 520px;
-    }
-
-    }
-
     .landing-page{
         background-color:#EBF2F5; 
     }
@@ -387,7 +274,7 @@ export default {
         background-color: #15C3D6;
         justify-content: center;
         padding-bottom: 90px;
-        border-radius: 0 0 0 150px;
+        border-bottom-left-radius: 150px;
     }
 
     .banner-container{
@@ -414,24 +301,12 @@ export default {
         flex-direction: column;
         align-items: center;
     }
-
-    .banner-container--img{
-    width: 100%;
-    max-width: 1100px;
-    flex: 1.5;
-    margin-right: -20px;
-    margin-top: 10px;
-    }
-
-    
     .banner-title{
-        margin-block-start: 0.83em;
-        margin-block-end: 0.83em;
-        font-family: Nunito;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 4rem;
         color: #FFD666;
+        font-size: 4rem;
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-align: center;
     }
 
     .banner-text{
@@ -439,10 +314,12 @@ export default {
         font-size: 1.4rem;
         font-weight: bold;
         color: #FFFFFF;
+        text-align: justify;
     }
 
     .banner-button{
     display: flex;
+    height: 70px;
     width: 90%;
     margin-top: 55px;
     color: #FFFFFF;
@@ -453,14 +330,32 @@ export default {
     justify-content: space-evenly;
     }
 
+    .banner-button-icon{
+        height: 40px;
+        margin-top: 15px;
+    }
+
+    .banner-button-text{
+        margin-top: 18px;
+        margin-left: -20px;
+    }
+
     .banner-button:active{
         background-color: #19315e;
     }
     
-    .banner-button-text{
-        margin-left: -20px;
+    .banner-container--img{
+        width: 100%;
+        max-width: 1100px;
+        flex: 1.5;
+        margin-right: -20px;
+        margin-top: 10px;
+        margin-left:100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .banner-img{
         width: 100%;
     }
@@ -502,36 +397,6 @@ export default {
     
     .about-us-text{
         color: rgba(46, 74, 125, 0.8);
-    }
-
-    @media only screen and (max-width: 450px){
-    
-    .nav-bar-container{
-        display: flex;
-        flex-direction: column;
-        background-color: #15C3D6;
-        height: 175px;
-    }
-
-    .nav-bar-container-buttons{
-        display: none;
-    }
-
-    .nav-bar-toggle{
-    width: 40px;
-    height: 30px;
-    }
-
-    .nav-bar-rectangle{
-        background-color: #ffffff;
-        height: 5px;
-        width: 100%;
-        margin: 6px auto;
-    }
-    
-    .exams{
-        border-radius: 0 120px 0 120px;
-    }
     }
 
     .exams{
@@ -634,6 +499,7 @@ export default {
     .address-item{
         width: 80%;
         display: flex;
+        margin-bottom: 20px;
     }
     
     .address-item-text{
@@ -715,6 +581,7 @@ export default {
     font-weight: 800;
     text-align: center;
     font-family: Nunito;
+    margin-top: 55px;
     }
 
     .contact-items{
@@ -722,14 +589,14 @@ export default {
         font-size: 1.5rem;
         color:#2E4A7D;
         font-weight: 800;
-        margin-top:-55px;
+        margin-top: 15px;
     }
 
     .contact-item{
         display: flex;
         align-items: center;
         text-align: left;
-        margin-top:-20px;
+        margin-bottom: 20px;
     }
 
     .contact-item--txt{
@@ -829,5 +696,182 @@ export default {
     cursor: pointer;
     text-decoration: underline;
     }
+
+     @media only screen and (max-width: 980px){
+
+    .banner-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-container--info{
+        margin-left:0px;
+    }
+
+    .banner-button{
+        display: flex;
+        width: 95%;
+        margin-top: 55px;
+        color: #FFFFFF;
+        font-size: 1.8rem;
+        background-color: #2E4A7D;
+        border-radius: 20px;
+        border: none;
+        justify-content: space-evenly;
+    }
     
+    .banner-container--img{
+        display:flex ;
+        width: 100%;
+        max-width: 600px;
+        flex: 0;
+        margin: 40px 30px 0 0px;
+    }    
+
+    .banner-button-text{
+        font-size: 1.5rem;
+    }
+    
+    .banner-title{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .banner-text{ 
+    margin-left:0px;
+    }
+
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-forms-user-info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-container-info{
+        padding-top: 20px;
+    }
+    
+    .contact-items{
+        padding-left: 10%;
+    }
+
+    .contact-forms-container{
+        width: 100%;
+    }
+
+    .address-title{
+        display: flex;
+        justify-content: center;
+    }
+
+    .address-container-info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .address-container{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+    }
+
+    .address-map{
+        margin-top:15px;
+    }
+
+
+    .about-us-container{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 90px;
+    margin-left:5%;
+    }
+
+
+    .about-us-img{
+        display: flex;
+        width: 90%;
+        max-width: 600px;
+        min-width: 250px;
+        margin: 0;
+    }
+
+    .about-us-container-info{
+    margin: 0;
+    width: 80%;
+    margin-top: 40px;
+    max-width: 520px;
+    }
+    }
+    
+    @media only screen and (max-width: 750px){
+
+    .nav-bar-container{
+        display: flex;
+        flex-direction: column;
+        background-color: #15C3D6;
+        height: 175px;
+    }
+
+    .nav-bar-container-buttons{
+        display: none;
+    }
+
+    .nav-bar-toggle{
+    width: 40px;
+    height: 30px;
+    }
+
+    .nav-bar-rectangle{
+        background: #EBF2F5;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+    }
+    }
+
+    @media only screen and (max-width: 600px){
+
+        .banner{
+            border-bottom-left-radius: 80px;
+        }
+
+        .banner-container--img{
+            margin: 25px 20px 0 20px;
+        }
+
+        .footer-title{
+        font-size: 2.5rem;
+        }
+    }
+
+    @media only screen and (max-width: 450px){
+
+    
+    .banner-button-text{
+        margin-top: 8%;
+        font-size: 1.3rem;
+    }
+
+    .exams{
+        border-radius: 0 120px 0 120px;
+    }
+
+    .footer-title{
+        font-size: 2rem;
+    }
+
+    }
+
 </style>
